@@ -9,7 +9,7 @@ public class prompt {
         int a, i = 0; char ch; double d; String st, BigInteger;
         String[] s = {"an integer", "a double", "a character", "a string",
                 "another string", "a big integer", "a big decimal"};
-        // placeholders
+        // placeholders used during testing
         a = Int(s[i]);
         i++;
         d = Double(s[i]);
@@ -28,6 +28,7 @@ public class prompt {
         BigDecimal bd = new BigDecimal(BigDec(s[i]));
         System.out.println(bd);
     }
+    // methods for each data type
     public static int Int(String s){
         String r = "Enter ", t = ":  ";
         Scanner sc = new Scanner(System.in);
@@ -48,7 +49,7 @@ public class prompt {
         System.in.read();
         return ch;
     }
-    public static String String(String s) throws IOException, IllegalArgumentException{
+    public static String String(String s) throws IOException{
         int i = 0;
         BufferedReader br =
                 new BufferedReader(new InputStreamReader(System.in));
@@ -71,4 +72,5 @@ public class prompt {
         System.out.print(r + s + t);
         return br.readLine();
     }
+
 }

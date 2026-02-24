@@ -43,7 +43,6 @@ public class prompt {
     }
     public static char Char(String s) throws Exception{
         String r = "Enter ", t = ":  ";
-        // no scanner required
         System.out.print(r + s + t);
         char ch = (char)System.in.read();
         System.in.read();
@@ -54,7 +53,6 @@ public class prompt {
         BufferedReader br =
                 new BufferedReader(new InputStreamReader(System.in));
         String r = "Enter ", t = ":  ";
-        // see ex72
         System.out.print(r + s + t);
         return br.readLine();
     }
@@ -74,3 +72,4 @@ public class prompt {
     }
 
 }
+
